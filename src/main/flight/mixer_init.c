@@ -418,9 +418,6 @@ static void mixerConfigureOutput(void)
         // load custom mixer into currentMixer
         for (int i = 0; i < MAX_SUPPORTED_MOTORS; i++) {
             // check if done
-            if (customMotorMixer(i)->throttle == 0.0f) {
-                break;
-            }
             mixerRuntime.currentMixer[i] = *customMotorMixer(i);
             mixerRuntime.motorCount++;
         }

@@ -63,7 +63,8 @@ typedef enum mixerMode
     MIXER_CUSTOM_AIRPLANE = 24,
     MIXER_CUSTOM_TRI = 25,
     MIXER_QUADX_1234 = 26,
-    MIXER_OCTOX8P = 27
+    MIXER_OCTOX8P = 27,
+    MIXER_TANK = 28
 } mixerMode_e;
 
 typedef enum mixerType

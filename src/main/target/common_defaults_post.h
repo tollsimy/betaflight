@@ -105,7 +105,7 @@
 #endif
 
 #ifndef DEFAULT_MIXER
-#define DEFAULT_MIXER    MIXER_QUADX
+#define DEFAULT_MIXER    MIXER_TANK
 #endif
 
 #if defined(USE_RANGEFINDER) && defined(USE_RANGEFINDER_HCSR04)
