@@ -1732,8 +1732,6 @@ static void printMotorMix(dumpFlags_t dumpMask, const motorMixer_t *customMotorM
     char buf2[FTOA_BUFFER_LENGTH];
     char buf3[FTOA_BUFFER_LENGTH];
     for (uint32_t i = 0; i < MAX_SUPPORTED_MOTORS; i++) {
-        if (customMotorMixer[i].throttle == 0.0f)
-            break;
         const float thr = customMotorMixer[i].throttle;
         const float roll = customMotorMixer[i].roll;
         const float pitch = customMotorMixer[i].pitch;
@@ -1778,9 +1776,6 @@ static void cliMotorMix(const char *cmdName, char *cmdline)
         printMotorMix(DUMP_MASTER, customMotorMixer(0), NULL, NULL);
     } else if (strncasecmp(cmdline, "reset", 5) == 0) {
         // erase custom mixer
-        for (uint32_t i = 0; i < MAX_SUPPORTED_MOTORS; i++) {
-            customMotorMixerMutable(i)->throttle = 0.0f;
-        }
     } else if (strncasecmp(cmdline, "load", 4) == 0) {
         ptr = nextArg(cmdline);
         if (ptr) {
