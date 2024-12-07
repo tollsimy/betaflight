@@ -76,13 +76,6 @@ static const motorMixer_t mixerQuadX[] = {
     { 1.0f,  1.0f, -1.0f, -1.0f },          // FRONT_L
 };
 
-static const motorMixer_t tank[] = {
-    { 1.0f, 0.0f, 0.0f, 0.0f },          // MOTOR 1
-    { 0.0f, 1.0f, 0.0f, 0.0f },          // MOTOR 2
-    { 0.0f, 0.0f, 1.0f, 0.0f },          // MOTOR 3
-    { 0.0f, 0.0f, 0.0f, 1.0f },          // MOTOR 4
-};
-
 #ifndef USE_QUAD_MIXER_ONLY
 static const motorMixer_t mixerTricopter[] = {
     { 1.0f,  0.0f,  1.333333f,  0.0f },     // REAR
@@ -253,7 +246,6 @@ const mixer_t mixers[] = {
     { 3, true,  mixerTricopter },      // MIXER_TRI
     { 4, false, mixerQuadP },          // MIXER_QUADP
     { 4, false, mixerQuadX },          // MIXER_QUADX
-    { 4, false, tank },                // TANK
     { 2, true,  mixerBicopter },       // MIXER_BICOPTER
     { 0, true,  NULL },                // * MIXER_GIMBAL
     { 6, false, mixerY6 },             // MIXER_Y6
